@@ -1,23 +1,16 @@
 {
-  "name": "nodejsansio",
-  "version": "1.0.0",
-  "description": "Demo in Node.js for Ansio team",
+  "name": "webapp",
+  "version": "0.1.0",
+  "description": "IMAD 2016 course app",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jeyag/nodejsAnsio.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jeyag/nodejsAnsio/issues"
-  },
-  "homepage": "https://github.com/jeyag/nodejsAnsio#readme",
+  "author": "GJS",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.13.3",
+    "morgan": "^1.7.0"
   }
 }
