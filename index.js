@@ -10,7 +10,7 @@ app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __di
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-
+app.use('/', routes);
 
 
 app.listen(PORT, () => console.log("Server listening on port !"));
