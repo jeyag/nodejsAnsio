@@ -1,7 +1,21 @@
 #nodejsAnsio
-###When a remote service needs to call your application and you don't want (or can) deploy your application to a public server.
-For debugging purposes, it's better to keep everything local.
-When you're testing mobile apps and you want to expose your local server as the back-end.
-When you want to make a quick demo of your app to a client/user in another part of the world.
-When you want to publicly expose something, like an email server or a file repository from your private network.
-Having said that, we'll take a quick look at each option using a Hello World Express app.
+###  This Node Application is to document the steps to be followed in order to deploy your application which is running locally to a remote server
+###  In our example we develop our local application using node.js and we use the Paas Heroku web server as our remote server
+###  Prerequisites :
+
+###  Software we need to install for Windows:
+###     1. Visual Studio Code
+###     2. GIT to be installed and configured for SSH connection, SSH key generation and adding it under your permitted list.
+###     3. Postgresql
+
+
+###   Steps to be followed:
+###     1. Heroku Credentials - Basic Free plan is enough, Create a web application and link it with a Postgresql database 
+###     2. Link it with your git account giving authorisation 
+###     3. From your local repository make sure it is connected to the remote repository which is in git.
+###     4. Then Add a Procfile in your local repository and push it to the remote repository.
+
+### Expected Output:
+### Now your basic node application is running in remote server. If you want to connect with the postgresql database in cloud connect with it  ### from your locally installed Postgresql and save the changes in the remote data server.
+### Then make neccessary changes in the config file or in the environment variables.
+### Now your application is connected to the database also.
