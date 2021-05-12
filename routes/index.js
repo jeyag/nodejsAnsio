@@ -11,8 +11,9 @@ router.get('/test/:id', function(req, res, next) {
 });
 
 router.post('/test/submit', function(req, res, next) {
-  id=req.params.id;
-  res.redirect('/test/...');
+ 
+  
+  res.redirect('/test/' + req.body.id);
 });
 
 module.exports = router;
