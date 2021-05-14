@@ -2,27 +2,37 @@ h1 {
   padding: 50px;
   font: 44px "Lucida Grande", Helvetica, Arial, sans-serif;
   text-align: center;
-  color: #00B7FF;
+  color: #8A2BE2;
 }
 
 body {
-  padding: 20px;
+ margin-left: 5%;
+ margin-bottom: 5% ;
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: #00B7FF;
+  background-color: #FFFFFF;
+  color: BlueViolet;
 }
 
 a {
-  color: #00B7FF;
+  color: BlueViolet;
 }
 
 				    		
 input{
+padding-top : 100 px	;
  text-align :center;
  font-size: 17pt; 
- color: #00B7FF;
+ color: #6495ED;
 }
 button{
+  padding-top : 100 px	;
   text-align :center;
-  color: #00B7FF;
- font-size: 17pt; 
+  color: BlueViolet;
+  font-size: 17pt; 
     }
+output{
+  padding-top : 100 px	;
+  text-align :center;
+  font-size: 17pt; 
+  color: #4169E1;
+     }
