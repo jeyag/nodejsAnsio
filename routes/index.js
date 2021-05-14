@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Cool, huh!', condition: true, anyArray: [1,2,3] });
+  res.render('index', { title: 'Ansio Node!', condition: true, anyArray: [1,2,3] });
 });
 
 router.get('/test/:id', function(req, res, next) {
@@ -13,7 +13,7 @@ router.get('/test/:id', function(req, res, next) {
 router.post('/test/submit', function(req, res, next) {
  
   
-  res.redirect('/test/' + req.body.id);
+  res.redirect('/test/' + req.body.textid);
 });
 
 module.exports = router;

@@ -1,0 +1,28 @@
+h1 {
+  padding: 50px;
+  font: 44px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #00B7FF;
+}
+
+body {
+  padding: 20px;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #00B7FF;
+}
+
+a {
+  color: #00B7FF;
+}
+
+				    		
+input{
+ text-align :center;
+ font-size: 17pt; 
+ color: #00B7FF;
+}
+button{
+  text-align :center;
+  color: #00B7FF;
+ font-size: 17pt; 
+    }
