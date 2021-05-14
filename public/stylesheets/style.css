@@ -17,7 +17,12 @@ a {
   color: BlueViolet;
 }
 
-				    		
+#textid{
+  padding-top : 100 px	;
+   text-align :center;
+   font-size: 17pt; 
+   color: #6495ED;
+  }				    		
 input{
 padding-top : 100 px	;
  text-align :center;

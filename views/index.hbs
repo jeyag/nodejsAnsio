@@ -1,10 +1,30 @@
+
 <h1>{{ title }}</h1>
+<head>
+
+    <meta charset="UTF-8">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <script type="text/javascript" src="/js/main.js">
+</script>
+</head>
 <p>Welcome to {{ title }}</p>
 <body>
-<form action="/test/submit" method="post">
+<form name="inputForm" id="inputForm" onload="javascript:return init()" action="/test/submit" method="post">
 
-    <label> Please enter the number of candidates present </label>
-    <input type="text" name="textid">
-    <button type="submit" name="buttonSubmit">Submit</button>
+
+<table align="center">
+
+<div style="margin-top:-10px;margin-right:-20px;">
+<tr>
+<td><label for="textid">Candidates Present:</label></td>
+<td> <input type="text" name="textid" id="textid" required placeholder="Enter any number" onkeypress="javascript:return isNumber(event)" ></td>
+<td width="10"><div id="fn_error" style="margin-left:-744px;margin-top:-20px;display:none;">Should be a number</div></td>
+<td><button type="submit" name="buttonSubmit" onclick="return formValidation()">Submit</button></td>
+</tr>
+</div>
+</table>
+
+   
 </form>
+
 </body>
