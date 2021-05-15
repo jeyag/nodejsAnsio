@@ -23,11 +23,11 @@ router.post('/test/submit', function(req, res, next) {
         "feedback":req.body.feedback
     }
   }; 
-  
- /* return res
+//Another way of sending data
+/* return res
           .status(201)
           .json(data);*/
-
+//res.send(data);
 res.redirect('/test/'+ data.Employee.id );
 });
 
