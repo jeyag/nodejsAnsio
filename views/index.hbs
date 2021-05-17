@@ -2,7 +2,7 @@
    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
    
     <link href="/stylesheets/style.css" rel="stylesheet">
-    <script type="text/javascript" src="/js/main.js">
+    <script type="text/javascript" src="js/main.js">
 </script>
 </head>
 <h1>Feedback form</h1>
@@ -11,13 +11,13 @@
 
 
 <div class="container">
-    <form name="inputForm" id="inputForm"  method="post" action="/test/submit">
+    <form name="inputForm" id="inputForm"  method="post" action="/storeData">
     <div class="row">
       <div class="col-25">
         <label for="fname">Employee Number</label>
       </div>
       <div class="col-75">
-        <input type="text" id="empNo" name="empNo" placeholder="Your number.." onkeypress="javascript:return isNumber(event)">
+        <input type="text" id="empNo" name="empNo" required placeholder="Your number.." onkeypress="javascript:return isNumber(event)">
       </div>
     </div>
     <div class="row">
@@ -25,7 +25,7 @@
         <label for="fname">First Name</label>
       </div>
       <div class="col-75">
-        <input type="text" id="fname" name="fname" placeholder="Your name.." onkeypress="javascript:return onlyAlphabets(event)">
+        <input type="text" id="fname" name="fname" required placeholder="Your name.." onkeypress="javascript:return onlyAlphabets(event)">
       </div>
     </div>
     <div class="row">
@@ -33,7 +33,7 @@
         <label for="lname">Last Name</label>
       </div>
       <div class="col-75">
-        <input type="text" id="lname" name="lname" placeholder="Your last name.." onkeypress="javascript:return onlyAlphabets(event)">
+        <input type="text" id="lname" name="lname" required placeholder="Your last name.." onkeypress="javascript:return onlyAlphabets(event)">
       </div>
     </div>
     <div class="row">
@@ -53,7 +53,7 @@
         <label for="feedbackText">Feedback</label>
       </div>
       <div class="col-75">
-        <textarea id="feedbackText" name="feedbackText" placeholder="Write something.."> </textarea>
+        <textarea id="feedbackText" name="feedbackText" required></textarea>
       </div>
     </div>
     <div class="row">
@@ -61,8 +61,4 @@
     </div>   
     </form>
 </div>
-
-   
-
-
 </body>

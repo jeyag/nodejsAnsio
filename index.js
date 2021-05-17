@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 var hbs = require('express-handlebars');
 var routes = require('./routes/index');
 
+app.use(bodyParser.json());
+
 // view engine setup
 app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts/'}));
 app.set('views', path.join(__dirname, 'views'));
@@ -19,6 +21,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+
+/* Come back to home page. */
+
+app.post('/back', function (req, res) {
+  res.render('index', { heading: 'Feedback',  condition: true, anyArray: [1,2,3] });
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
