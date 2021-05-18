@@ -6,8 +6,10 @@ require('dotenv').config();
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });  
 
+// Uncomment the following line if you test from your local computer connecting with your local database.
 //const connectionString = `postgresql://${process.env.DB_USER}:${process.env.DATABASE_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`
 
+// Connect with the Heroku Database connected with your App
 const connectionString = process.env.DATABASE_URL;
 var router = express.Router();
 
