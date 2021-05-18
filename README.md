@@ -21,7 +21,7 @@
 ### Expected Output:
 ## Now your basic node application is running in remote server with the url https://nodeansio.herokuapp.com/ If you want to connect with the postgresql database in cloud connect with it 
 ## from your locally installed Postgresql and save the changes in the remote data server.
-## Then make neccessary changes in the config file or in the config variables.
+## Then make neccessary changes in the env file .
 ## Now your application is successfully connected to the database also.
 
 

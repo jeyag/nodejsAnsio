@@ -6,9 +6,7 @@ require('dotenv').config();
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });  
 
-//const connectionString = `postgresql://${process.env.DB_USER}:${process.env.DATABASE_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`
-connectionString = process.env.DATABASE_URL;
-
+const connectionString = `postgresql://${process.env.DB_USER}:${process.env.DATABASE_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`
 
 var router = express.Router();
 
@@ -24,10 +22,14 @@ router.get('/', function(req, res, next) {
 router.get('/createTable', function (req, res) {
   var tableName = req.params.tableName;
   const pool = new Pool({
-    connectionString
+    connectionString,ssl: {
+      rejectUnauthorized: false,
+    }
   });
   const client = new Client({
-    connectionString
+    connectionString,ssl: {
+      rejectUnauthorized: false,
+    }
    });
   client.connect();
   client.query( "CREATE TABLE tableFeedback (id SERIAL PRIMARY KEY, empno VARCHAR(30), fname VARCHAR(30),lname VARCHAR(30), team VARCHAR(15), feedbacktext VARCHAR(100))" , function( err, result) {
@@ -50,11 +52,15 @@ router.post('/storeData',urlencodedParser, function (req, res) {
  var team = req.body.team;
  var feedbackText = req.body.feedbackText;
  const pool = new Pool({
-  connectionString,
+  connectionString,ssl: {
+    rejectUnauthorized: false,
+  }
 });
 
  const client = new Client({
-  connectionString,
+  connectionString,ssl: {
+    rejectUnauthorized: false,
+  }
  });
 
  client.connect();
