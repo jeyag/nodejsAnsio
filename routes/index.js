@@ -64,7 +64,9 @@ router.post('/storeData',urlencodedParser, function (req, res) {
  const client = new Client({
   connectionString,ssl: {
     rejectUnauthorized: false,
-  }
+  },
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 2000
  });
 
  client.connect();
