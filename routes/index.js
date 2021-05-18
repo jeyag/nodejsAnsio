@@ -6,7 +6,7 @@ require('dotenv').config();
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false });  
 
-const connectionString = `postgresql://${process.env.DB_USER}:${process.env.DATABASE_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}?sslmode=require`
+const connectionString = `postgresql://${process.env.DB_USER}:${process.env.DATABASE_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_DATABASE}?${process.env.PGSSLMODE}`
 
 
 
@@ -24,10 +24,10 @@ router.get('/', function(req, res, next) {
 router.get('/createTable', function (req, res) {
   var tableName = req.params.tableName;
   const pool = new Pool({
-    connectionString,
+    connectionString
   });
   const client = new Client({
-    connectionString,
+    connectionString
    });
   client.connect();
   client.query( "CREATE TABLE tableFeedback (id SERIAL PRIMARY KEY, empno VARCHAR(30), fname VARCHAR(30),lname VARCHAR(30), team VARCHAR(15), feedbacktext VARCHAR(100))" , function( err, result) {
