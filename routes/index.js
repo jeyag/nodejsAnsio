@@ -25,15 +25,13 @@ router.get('/createTable', function (req, res) {
     connectionString,ssl: {
       rejectUnauthorized: false,
     },
-    idleTimeoutMillis: 0,
-    connectionTimeoutMillis: 0
+    idleTimeoutMillis: 30000,
+    connectionTimeoutMillis: 2000
   });
   const client = new Client({
     connectionString,ssl: {
       rejectUnauthorized: false,
-    },
-    idleTimeoutMillis: 0,
-    connectionTimeoutMillis: 0
+    }
    });
   client.connect();
   client.query( "CREATE TABLE tableFeedback (id SERIAL PRIMARY KEY, empno VARCHAR(30), fname VARCHAR(30),lname VARCHAR(30), team VARCHAR(15), feedbacktext VARCHAR(100))" , function( err, result) {
@@ -59,16 +57,14 @@ router.post('/storeData',urlencodedParser, function (req, res) {
   connectionString,ssl: {
     rejectUnauthorized: false,
   },
-  idleTimeoutMillis: 0,
-  connectionTimeoutMillis: 0
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 2000
 });
 
  const client = new Client({
   connectionString,ssl: {
     rejectUnauthorized: false,
-  },
-  idleTimeoutMillis: 0,
-  connectionTimeoutMillis: 0
+  }
  });
 
  client.connect();
