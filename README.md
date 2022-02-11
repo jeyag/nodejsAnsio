@@ -14,6 +14,17 @@
 ##     2. Link it with your git account giving authorisation 
 #           -click more in your app dashboard and click run console to view the console output
 ##     3. From your local repository make sure it is connected to the remote repository which is in git.
+##        GIT Commands you need to know
+               git --version
+               Make a new directory and change the directory then git init
+               git add .
+               git status
+               git commit -m "Comment for Commit"
+               Create a remote repository in GITHUB and get the clone with SSH link copied
+               git remote add origin "link copied"
+               git pull origin master
+               git push origin master
+               
 ##     4. Then Add a Procfile with the content 
 #                web: npm start
 ##        in your local repository and push it to the remote repository.
