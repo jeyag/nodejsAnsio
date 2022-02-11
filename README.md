@@ -1,4 +1,4 @@
-### nodejsAnsio   - nodeansio 
+### nodejsAnsio   - nodeansio - Educational Purpose Only
 ##  This Node Application is to document the steps to be followed in order to deploy your application which is running locally to a remote server
 ##  In our example we develop our local application using node.js and we use the Paas Heroku web server as our remote server
 ###  Prerequisites :
